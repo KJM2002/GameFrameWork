@@ -4,6 +4,7 @@
 #include "GameObject.h"
 #include <assert.h>
 
+////////////////////////////////////////////////////////
 GameObject::~GameObject()
 {
     if (myCollider)
@@ -13,6 +14,7 @@ GameObject::~GameObject()
     }
 }
 
+////////////////////////////////////////////////////////
 void GameObject::Update(float deltaTime)
 {
     Move(deltaTime);
@@ -24,6 +26,7 @@ void GameObject::Update(float deltaTime)
     }
 }
 
+////////////////////////////////////////////////////////
 void GameObject::Render(HDC hdc)
 {
     //비트맵 그리기
@@ -33,6 +36,7 @@ void GameObject::Render(HDC hdc)
 }
 
 
+////////////////////////////////////////////////////////
 void GameObject::SetColliderCircle(float radius)
 {
     if (myCollider)
@@ -52,6 +56,7 @@ void GameObject::SetColliderCircle(float radius)
 }
 
 
+////////////////////////////////////////////////////////
 void GameObject::SetColliderBox(float width, float height)
 {
     if (myCollider)
@@ -71,6 +76,8 @@ void GameObject::SetColliderBox(float width, float height)
     boxP->halfSize.y = height / 2.0f;
 }
 
+
+////////////////////////////////////////////////////////
 void GameObject::DrawCollider(HDC hdc)
 {
     HPEN hPenR = CreatePen(PS_SOLID, 2, RGB(255, 0, 0));
@@ -94,16 +101,22 @@ void GameObject::DrawCollider(HDC hdc)
     DeleteObject(hPenB);
 }
 
+////////////////////////////////////////////////////////
 void GameObject::SetBitmapInfo(BitmapInfo* bitmapInfo){
     assert(m_pBitmapInfo == nullptr && "BitmapInfo must be null!");
 
     m_pBitmapInfo = bitmapInfo;
 }
 
-// 현재 DrawBitmap()은 m_frameXY[m_frameIndex]에서 srcX, srcY를 가져오고, m_frameWidth, m_frameHeight만큼 잘라서 AlphaBlend()로 그립니다. 
-// //그러니까 이 값들을 이미지마다 다르게 세팅해줘야 합니다
+////////////////////////////////////////////////////////
+// 현재 DrawBitmap()은 m_frameXY[m_frameIndex]에서 srcX, srcY를 가져오고, m_frameWidth, m_frameHeight만큼 잘라서 AlphaBlend()로 그림
+// 그러니까 이 값들을 이미지마다 다르게 세팅해줘야 함
 void GameObject::SetFrameInfo(int frameWidth, int frameHeight, int frameCount, int columnCount)
 {
+
+    // player   :   102, 94, 14, 5
+    // Enemy    :   183, 168, 14, 5
+
     m_frameWidth = frameWidth;
     m_frameHeight = frameHeight;
     m_frameCount = frameCount;
@@ -112,7 +125,7 @@ void GameObject::SetFrameInfo(int frameWidth, int frameHeight, int frameCount, i
     m_frameIndex = 0;
     m_frameTime = 0.0f;
 
-    for (int i = 0; i < frameCount && i < 32; ++i)
+    for (int i = 0; i < frameCount; ++i)
     {
         int col = i % columnCount;
         int row = i / columnCount;
@@ -122,12 +135,14 @@ void GameObject::SetFrameInfo(int frameWidth, int frameHeight, int frameCount, i
     }
 }
 
+////////////////////////////////////////////////////////
 void GameObject::SetRenderSize(int width, int height)
 {
     m_width = width;
     m_height = height;
 }
 
+////////////////////////////////////////////////////////
 void GameObject::DrawBitmap(HDC hdc)
 {
     if (m_pBitmapInfo == nullptr) return;
@@ -158,6 +173,7 @@ void GameObject::DrawBitmap(HDC hdc)
 
 }
 
+////////////////////////////////////////////////////////
 // 가져오는 그림 처리 
 void GameObject::UpdateFrame(float deltaTime)
 {
@@ -173,7 +189,7 @@ void GameObject::UpdateFrame(float deltaTime)
 
 
 
-
+////////////////////////////////////////////////////////
 learning::Collider* GameObject::GetCollider() {
     
     if (myCollider) {
@@ -181,12 +197,13 @@ learning::Collider* GameObject::GetCollider() {
     }
 }
 
-
+////////////////////////////////////////////////////////
 void GameObject::Move(float deltaTime)
 {
     GameObjectBase::Move(deltaTime);
 }
 
+////////////////////////////////////////////////////////
 void GameObjectBase::SetName(const char* name)
 {
     if (name == nullptr) return;

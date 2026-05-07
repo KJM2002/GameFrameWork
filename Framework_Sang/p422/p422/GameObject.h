@@ -98,6 +98,7 @@ public:
     void SetBitmapInfo(BitmapInfo* bitmapInfo);  //
     void SetFrameInfo(int frameWidth, int frameHeight, int frameCount, int columnCount);
 
+
     void SetRenderSize(int width, int height);
 
 protected:

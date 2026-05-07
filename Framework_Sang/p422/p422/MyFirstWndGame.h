@@ -47,6 +47,9 @@ private:
     void UpdatePlayerInfo();
     void UpdateEnemyInfo();         // 적이 플레이어 추적 가능하도록 함수 추가
     void UpdateWholeIntersect();
+    void PushEnemiesEachOther();
+    void PushEnemiesOutOfPlayer();
+
 
     void SettingBoxPos(learning::Collider* thisBox, learning::Collider* targetBox, GameObject* pThis, learning::Vector2f firstDir);
     learning::Vector2f GetBoxDir(learning::Collider* thisBox, learning::Collider* targetBox);

@@ -1,24 +1,25 @@
-﻿  MyFirstWndGame.cpp
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.h(13,11): warning C4099: 'learning::Vector2f': type name first seen using 'struct' now seen using 'class'
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(538,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (p422.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  MyFirstWndGame.cpp
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.h(13,11): warning C4099: 'learning::Vector2f': type name first seen using 'struct' now seen using 'class'
   (compiling source file 'MyFirstWndGame.cpp')
-      C:\Users\User\Desktop\p422\p422\p422\Utillity.h(26,12):
+      C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\Utillity.h(26,12):
       see declaration of 'learning::Vector2f'
   
-C:\Users\User\Desktop\p422\p422\p422\Collider.h(7,9): warning C4099: 'learning::Collider': type name first seen using 'class' now seen using 'struct'
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\Collider.h(7,9): warning C4099: 'learning::Collider': type name first seen using 'class' now seen using 'struct'
   (compiling source file 'MyFirstWndGame.cpp')
-      C:\Users\User\Desktop\p422\p422\p422\Collider.h(7,9):
+      C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\Collider.h(7,9):
       see declaration of 'learning::Collider'
   
-C:\Users\User\Desktop\p422\p422\p422\GameObject.h(9,12): warning C4099: 'renderHelp::BitmapInfo': type name first seen using 'class' now seen using 'struct'
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\GameObject.h(9,12): warning C4099: 'renderHelp::BitmapInfo': type name first seen using 'class' now seen using 'struct'
   (compiling source file 'MyFirstWndGame.cpp')
-      C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.h(10,11):
+      C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.h(10,11):
       see declaration of 'renderHelp::BitmapInfo'
   
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(176,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(177,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(247,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(248,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(320,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(397,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\p422\p422\p422\MyFirstWndGame.cpp(397,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  p422.vcxproj -> C:\Users\User\Desktop\p422\p422\x64\Debug\p422.exe
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(179,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(180,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(250,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(251,10): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(323,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(400,58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\GitProject\GameFrameWork\Framework_Sang\p422\p422\MyFirstWndGame.cpp(400,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  p422.vcxproj -> C:\GitProject\GameFrameWork\Framework_Sang\p422\x64\Debug\GameFrameWork.exe
